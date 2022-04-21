@@ -2,7 +2,7 @@
 
 This is a simple songs list project.\
 When you click on a button beside a song, \
-it will show you some information concerning that song. 
+it will show you the title and length of a given song. 
 
 This is a practice app for Redux training purposes.
 
