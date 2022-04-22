@@ -1,3 +1,5 @@
+import {combineReducers} from "redux";
+
 // Returns a static list of songs - a static array
 const songsReducer = () => {
 	return [
@@ -12,6 +14,6 @@ const selectedSongReducer = (selectedSong = null, action) => {
 	if (action.type === 'SONG_SELECTED') {
 		return action.payload;
 	}
-	
+
 	return selectedSong;
 }
