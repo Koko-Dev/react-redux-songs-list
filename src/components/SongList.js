@@ -10,12 +10,8 @@ class SongList extends Component {
 	}
 }
 
-// Note: state will be all of our data inside of redux store,
-//  i.e. list of songs from reducer/ songsReducer and
-//  selected song from reducer/ selectedSongReducer
 const mapStateToProps = (state) => {
-	console.log(state);
-	return state;
+	return { songs: state.songs };
 }
 
 export default connect(mapStateToProps)(SongList);
