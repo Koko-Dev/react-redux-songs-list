@@ -34,6 +34,7 @@ const mapStateToProps = (state) => {
 
 // code:
 //   connect(mapStateToProps, mapDispatchToProps:{selectSong})(SongList)
-export default connect(mapStateToProps, {
-	selectSong
-})(SongList);
+export default connect(
+	mapStateToProps,
+	{selectSong}
+)(SongList);
