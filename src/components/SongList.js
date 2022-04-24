@@ -11,7 +11,7 @@ class SongList extends Component {
 				     key={song.title}>
 					<div className="right floated content">
 						<button className="ui button primary"
-						onClick={() => console.log(this.props.selectSong(song))}>
+						onClick={() => this.props.selectSong(song)}>
 							Select
 						</button>
 					</div>
@@ -29,7 +29,9 @@ class SongList extends Component {
 	}
 }
 
+// Note: When we click on select button, mapStateToProps() rerenders
 const mapStateToProps = (state) => {
+	console.log(state)
 	return {songs: state.songs};
 }
 
