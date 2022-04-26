@@ -5,6 +5,7 @@ import {selectSong} from '../actions';
 // Note:  Component === React.Component
 class SongList extends Component {
 	renderList() {
+		console.log('SongList renderList() method -  this.props:  ', this.props);
 		return this.props.songs.map((song) => {
 			return (
 				<div className="item"
@@ -22,7 +23,7 @@ class SongList extends Component {
 	}
 
 	render() {
-		// console.log(this.props);
+		console.log('SongList Component render() this.props:  ', this.props);
 		return (
 			<div className="ui divided list">{this.renderList()}</div>
 		)
@@ -31,13 +32,16 @@ class SongList extends Component {
 
 // Note: When we click on select button, mapStateToProps() rerenders
 const mapStateToProps = (state) => {
-	console.log(state)
+	console.log('SongList mapStateToProps state:  ', state)
 	return {songs: state.songs};
 }
 
-// code:
-//   connect(mapStateToProps, mapDispatchToProps:{selectSong})(SongList)
+// Note: selectSong is our action creator - actions/index.js
+//  - which returns the type and payload - song
+// Important: In order to UPDATE Redux store we need to dispatch an action creator;
+//  connect()'s second argument is the mapDispatchToProps property and
+//  we are setting its value to the action creator selectSong from actions/index.js
 export default connect(
 	mapStateToProps,
-	{selectSong}
+	{selectSong: selectSong}
 )(SongList);
