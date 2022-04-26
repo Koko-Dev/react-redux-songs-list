@@ -32,7 +32,7 @@ class SongList extends Component {
 
 // Note: When we click on select button, mapStateToProps() rerenders
 const mapStateToProps = (state) => {
-	console.log('SongList mapStateToProps state:  ', state)
+	console.log('SongList mapStateToProps state - {songs: state.songs}:  ', state)
 	return {songs: state.songs};
 }
 

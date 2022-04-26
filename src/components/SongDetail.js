@@ -12,6 +12,9 @@ const mapStateToProps = (state) => {
 	return {song: state.selectedSong};
 }
 
+// Note: Not necessary to dispatch and effect Redux store,
+//  so connect() will not need second argument
+//  mapDispatchToProps property
 export default connect(
 	mapStateToProps
 )(SongDetail);
