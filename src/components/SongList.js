@@ -5,7 +5,6 @@ import {selectSong} from '../actions';
 // Note:  Component === React.Component
 class SongList extends Component {
 	renderList() {
-		// console.log('SongList renderList() method -  this.props:  ', this.props);
 		return this.props.songs.map((song) => {
 			return (
 				<div className="item"
@@ -23,7 +22,6 @@ class SongList extends Component {
 	}
 
 	render() {
-		// console.log('SongList Component render() this.props:  ', this.props);
 		return (
 			<div className="ui divided list">{this.renderList()}</div>
 		)
@@ -32,7 +30,6 @@ class SongList extends Component {
 
 // Note: When we click on select button, mapStateToProps() rerenders
 const mapStateToProps = (state) => {
-	// console.log('SongList mapStateToProps state - {songs: state.songs}:  ', state)
 	return {songs: state.songs};
 }
 

@@ -13,15 +13,11 @@ const SongDetail = ({ song }) => {
 				Title: {song.title} <br/>
 				Duration: {song.duration}
 			</p>
-
-
-
 		</div>
 	);
 }
 
 const mapStateToProps = (state) => {
-	console.log('SongDetail mapStateToProps state:  ', state)
 	return {song: state.selectedSong};
 }
 
